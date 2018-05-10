@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计划课程表</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="fullcalender/fullcalendar.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="fullcalender/moment.min.js"></script>
+	<script type="text/javascript" src="fullcalender/fullcalendar.js"></script>
+	<style>
+.user-message {
+	min-width: 795px;
+}
+.user-lableBox {
+	position: absolute;
+	    bottom: -25px;
+    right: -30px;
+}
+.user-lable-font-zh,.user-lable-font-en {
+    color: #965d0c;
+	font-weight: bold;
+	text-align: center;
+}
+.user-lable .lable-text1 {
+	text-indent: 45px;
+	font-weight: bold;
+}
+.left-bottom-logo {
+	position: absolute;
+    left: 30px;
+    bottom: 20px;
+    width: 130px;
+    height: 45px;
+    background-image: url(images/logo-wfl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dm-close-btn {
+	position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #00000040;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    z-index: 19999;
+}
+/*.dm-close-btn {
+	position: absolute;
+	top: 30px; right: 30px;
+	width: 50px; 
+	height: 50px;
+	background: url(images/close-btn.png) no-repeat;
+	background-size: 85%;
+	background-color: #00000040; 
+	font-size: 25px; 
+	background-position: center;
+	border-radius: 50%; 
+	border: 3px solid white;
+}*/
+</style>
+<script>
+  $(document).ready(function(){
+  
+		
+		var calendar = jQuery('#calendar').fullCalendar({
+			header: {
+				left: '',
+				center: 'title',
+				right: 'prev,next today'			
+			},
+			selectable: true,
+			allDaySlot: false,
+			editable: true,
+			selectHelper: true,
+			theme:true,
+			allDayText:'全天',
+			buttonText:{
+			 	prev:     '前翻一页',
+			 	next:     '后翻一页',
+			 	prevYear: '上一年',
+			 	nextYear: '下一年',
+			 	today:    '今天',
+			 	month:    '月',
+			 	week:     '周',
+			 	day:      '日'
+			},
+			monthNames:['1月','2月', '3月', '4月', '5月', '6月', '7月',
+			 '8月', '9月', '10月', '11月', '12月'],
+			monthNamesShort:['1月','2月', '3月', '4月', '5月', '6月', '7月',
+			 '8月', '9月', '10月', '11月', '12月'],
+			dayNames:['星期日', '星期一', '星期二', '星期三',
+			 '星期四', '星期五', '星期六'],
+			dayNamesShort:['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+			defaultView: 'agendaWeek',
+			eventClick: function(event, jsEvent, view) {
+        console.log(event.id);
+        
+		  },
+			select: function(start, end, allDay) {
+				var now = new Date();
+        alert("将创建新的计划");
+			},
+			theme:false,
+      
+      
+      
+      
+      
+      
+			events: 
+			[
+{
+					id: 1,
+					editable: true,
+          title:'世外的历史',
+					start: new Date(2018,2,1,3,30),
+					end: new Date(2018,2,1,8,0),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 2,
+					editable: true,
+          title:'世外的历史',
+					start: new Date(2018,1,28,3,30),
+					end: new Date(2018,1,28,10,30),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 3,
+					editable: true,
+          title:'个人情绪力管理',
+					start: new Date(2018,2,2,3,30),
+					end: new Date(2018,2,2,8,30),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 4,
+					editable: true,
+          title:'世外的历史',
+					start: new Date(2018,2,3,3,30),
+					end: new Date(2018,2,3,10,0),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 5,
+					editable: true,
+          title:'个人情绪力管理活动2',
+					start: new Date(2018,2,3,10,30),
+					end: new Date(2018,2,3,13,30),
+					allDay: false,
+          className: 'lagged'
+				},
+        
+        
+			],
+      
+      eventResize: function(event, delta, revertFunc) {
+
+       },
+            
+      
+      eventDrop:function( event, delta, revertFunc, jsEvent, ui, view ) {
+        console.log(event.id);        
+        
+        if (!confirm("确定修改计划吗?")) {
+          revertFunc();
+        }
+        else{
+        }
+      }
+      
+		});
+  });
+  
+</script>
+</head>
+<body class="wrapper-bg">
+	<div class="header">
+		<div class="user-cancel-wrap">
+			<span class="notice-tip-box">
+				<a href="javascript:void(0)">通知</a><em>10</em>
+			</span>
+			<a href="javascript:void(0)" class="user-cancel">注销</a>
+		</div>		
+	</div>
+	<div class="main-wrap">
+		<div class="nav-wrap">
+			<ul class="nav-list">
+				<li class="nav-item nav-item-title z1"><i></i>教师培训平台</li>
+				<li class="nav-item z2"><a class="nav-link-active" href="javascript:void(0)">我的计划</a></li>
+				<li class="nav-item z3"><a class="nav-link" href="javascript:void(0)">我的课程</a></li>
+				<li class="nav-item z4"><a class="nav-link" href="javascript:void(0)">课程进度</a></li>
+			</ul>
+		</div>
+		<div class="sidebar-img"></div>
+		<div class="content-wrap">
+			<div class="content-hd">
+				<div class="user-active"></div>
+				<div class="user-img-wrap"><img src="images/user.jpg"></div>
+				<div class="user-name-wrap">
+					<div class="user-name">
+						韵小曦
+					</div>
+					<div class="index-name">
+						日历
+					</div>
+				</div>
+				<!-- <div class="user-target">
+					<div class="target-l">
+						<em class="text-icon"></em>
+						<span class="text-mq">我要成为一个聪明的、有才的、多金、的老师</span> 
+					</div>
+					<div class="target-r"></div>
+				</div> -->
+				<div class="user-target">
+					<div class="target-l">
+						<em class="text-icon1"></em>
+						<em class="text-icon"></em>
+					</div>
+					<div class="target-r"></div>
+					<div class="user-messagebox">
+						<div class="user-message">
+							<!-- <iframe id="user-message" frameborder="0" scrolling="no" src="file:///Users/mac/Desktop/jquery-barrager-master20160519/second.html"></iframe> -->
+							<div class="dm-close-btn">✕</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-mn">
+				<div class="calendar-wrap">
+					<div id='calendar'></div>
+				</div>
+				<div class="user-smg-wrap">	
+
+					<div class="user-smg-text-wrap">
+						<div class="user-smg-ipt-item">
+							<i class="text-icon-green"></i>
+							<span class="user-smg-content">成为一个积极乐观萌系的小学数学老师</span>
+						</div>
+						<div class="user-smg-ipt-item">
+							<i class="text-icon-blue"></i>
+							<span class="user-smg-content">本周想做的事情是把日历上的所有事情都做完</span>
+						</div>
+					</div>
+					
+					<a href="javascript:void(0)" class="user-smg-btn">
+						<div class="menu-icon"></div>
+					</a>
+
+					<div class="user-smg-ipt-wrap">
+						<div class="user-smg-item">
+							<i class="text-icon-blue"></i>
+							<input class="smg-ipt" type="text" name="" placeholder="成为一个积极乐观萌系的小学数学老师"></span>
+						</div>
+						<div class="user-smg-item">
+							<i class="text-icon-green"></i>
+							<input class="smg-ipt" type="text" name="" placeholder="成为一个积极乐观萌系的小学数学老师"></span>
+						</div>
+						<a href="javascript:void(0)" class="user-smg-ipt-sub">
+							提交
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="index-icon-box calendar-icon"></div>
+			<div class="logo-img"></div>
+			<div class="wfl-logo-img"></div>
+			<!-- <div class="content-ft">
+				<div class="content-ft-l"></div>
+				<div class="content-ft-mn">
+					<div class="page-wrap">
+						<div class="page-none"></div> <!-- 没有分页的状态 -->
+						<!-- <a class="page-last"></div>
+						<a class="page-next"></div> --
+					</div>
+					<marquee class="content-ft-text" direction="left" scrolldelay="30">****老师，昨天看完了《数学家的叹息》书籍     ****老师，昨天参加了集团的培训讲座........... ................ ........ ........  
+					</marquee>
+				</div>
+				<div class="content-ft-r"></div>
+			</div> -->
+			<div class="left-bottom-logo"></div>
+		</div>
+		<div class="user-lableBox">
+			<div class="user-lable">
+				<span class="lable-text1">我想成为<span class="lable-text2 user-lable-font-en">have a teacher</span><span class="user-lable-font-zh">有教师资格证</span>的老师</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var pause = false;
+$(document).ready(function(){
+  $(".user-smg-btn").click(function(){
+    $(".user-smg-text-wrap").fadeOut();
+    $(".user-smg-ipt-wrap").fadeIn();
+  });
+  $(".user-smg-ipt-sub").click(function(){
+    $(".user-smg-text-wrap").fadeIn();
+    $(".user-smg-ipt-wrap").fadeOut();
+  });
+  //右侧点击出现弹幕
+  $('.target-l').click(function(){
+  	$('.user-messagebox').show();
+  	$('.user-message').show();
+  	$('.target-l').hide();
+  	pause = true;
+  	})
+
+  $('.dm-close-btn').click(function(){
+  	$('.user-messagebox').hide();	
+  	$('.user-message').hide();
+  	$('.target-l').show();
+  	pause = false;
+  	})
+  $('.user-message > .user-text').mouseover(function(){
+  	$(this).stop();
+  	console.log($(this))
+  })
+});
+
+// 弹幕数据
+var data = [{
+	value: '使用的是静态死数据制区域和垂制区域和垂直分直分'
+}, {
+	value: '随机循环播放'
+}, {
+	value: '可以控制区域和垂直分布制区域和垂直分范围'
+}, {
+	value: '字体大小和速度在方法内设置'
+}, {
+	value: '适合用在一些静制区域和垂直分态页面上'
+}, {
+	value: '基于canvas实现'
+}, {
+	value: '因此IE9+浏览器制区域和垂直分才支持'
+}, {
+	value: '可以设置边框颜色制区域和垂直分'
+}]; 
+
+var index = 0;
+	
+
+var timer = setInterval(
+		'activeText(data)',500
+		)
+      //获取内容，创建新元素，并设置位置追加到目标元素中
+      //var val=$('input.content').val();	
+    function activeText(data){
+    	if(!pause){
+    		return;
+    	}
+    	if(index>=data.length){
+    		index=0;
+    	}
+    	var val = data[index].value;
+    	index++;
+      //console.log(val)
+
+      var $content=$('<div class="user-text">'+val+'<i class="iconfont">...... ...... ......&#xe61e;</i></div>');
+      var top = Math.random()*$('.user-message').height()+20;
+      // var top = get_heigth();
+      var widthdd = -500;
+      var color = getRandomColor();
+      $content.css({'top':top,'color':color,'right':widthdd});
+      $('div.user-message').append($content);
+
+      //移动到最右侧，直接删除该元素
+      $content.animate({right:$('.user-message').width()+70},15000,function(){
+        $(this).remove();
+      });
+}
+//随机高度
+var get_heigth = function(){
+          var height = $('.user-message').height() - 50;
+          var height1 = Math.random() * $('.user-message').height() + 20;
+          if(height1 > height){
+              get_heigth()
+          }
+          else{
+              return height1;
+          }
+      }
+//随机颜色
+var getRandomColor = function(){
+  return  '#' +
+    (function(color){
+    return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)])
+      && (color.length == 6) ?  color : arguments.callee(color);
+  })('');
+}
+
+</script>
+</html>

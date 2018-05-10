@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>周视图</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="fullcalender/fullcalendar.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="fullcalender/moment.min.js"></script>
+	<script type="text/javascript" src="fullcalender/fullcalendar.js"></script>
+	<script>
+  $(document).ready(function(){
+  
+		
+		var calendar = jQuery('#calendar').fullCalendar({
+			header: {
+				left: '',
+				center: 'title',
+				right: 'prev,next today'			
+			},
+			selectable: true,
+			allDaySlot: false,
+			editable: true,
+			selectHelper: true,
+			theme:true,
+			allDayText:'全天',
+			buttonText:{
+			 	prev:     '前翻一页',
+			 	next:     '后翻一页',
+			 	prevYear: '上一年',
+			 	nextYear: '下一年',
+			 	today:    '今天',
+			 	month:    '月',
+			 	week:     '周',
+			 	day:      '日'
+			},
+			monthNames:['1月','2月', '3月', '4月', '5月', '6月', '7月',
+			 '8月', '9月', '10月', '11月', '12月'],
+			monthNamesShort:['1月','2月', '3月', '4月', '5月', '6月', '7月',
+			 '8月', '9月', '10月', '11月', '12月'],
+			dayNames:['星期日', '星期一', '星期二', '星期三',
+			 '星期四', '星期五', '星期六'],
+			dayNamesShort:['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+			defaultView: 'agendaWeek',
+			eventClick: function(event, jsEvent, view) {
+        console.log(event.id);
+        
+		  },
+			select: function(start, end, allDay) {
+				var now = new Date();
+        alert("将创建新的计划");
+			},
+			theme:false,
+      
+      
+      
+      
+      
+      
+			events: 
+			[
+{
+					id: 1,
+					editable: true,
+          title:'世外的历史',
+					start: new Date(2018,2,1,3,30),
+					end: new Date(2018,2,1,8,0),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 2,
+					editable: true,
+          title:'世外的历史',
+					start: new Date(2018,1,28,3,30),
+					end: new Date(2018,1,28,10,30),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 3,
+					editable: true,
+          title:'个人情绪力管理',
+					start: new Date(2018,2,2,3,30),
+					end: new Date(2018,2,2,8,30),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 4,
+					editable: true,
+          title:'世外的历史',
+					start: new Date(2018,2,3,3,30),
+					end: new Date(2018,2,3,10,0),
+					allDay: false,
+          className: 'fufilled'
+				},
+				{
+					id: 5,
+					editable: true,
+          title:'个人情绪力管理活动2',
+					start: new Date(2018,2,3,10,30),
+					end: new Date(2018,2,3,13,30),
+					allDay: false,
+          className: 'lagged'
+				},
+        
+        
+			],
+      
+      eventResize: function(event, delta, revertFunc) {
+
+       },
+            
+      
+      eventDrop:function( event, delta, revertFunc, jsEvent, ui, view ) {
+        console.log(event.id);        
+        
+        if (!confirm("确定修改计划吗?")) {
+          revertFunc();
+        }
+        else{
+        }
+      }
+      
+		});
+  });
+  
+</script>
+</head>
+<bod>
+	<div class="header">
+		<div class="user-cancel-wrap">
+			<span class="notice-tip-box">
+				<a href="javascript:void(0)">通知</a><em>10</em>
+			</span>
+			<a href="javascript:void(0)" class="user-cancel">注销</a>
+		</div>		
+	</div>
+	<div class="main-wrap">
+		<div class="nav-wrap">
+			<ul class="nav-list">
+				<li class="nav-item nav-item-title z1"><i></i>教师培训平台</li>
+				<li class="nav-item z2"><a class="nav-link-active" href="javascript:void(0)">学生管理</a></li>
+			</ul>
+		</div>
+		<div class="sidebar-img"></div>
+		<div class="teacher-r-sidebar"></div>
+		<div class="content-wrap">
+			<div class="content-hd">
+				<div class="user-active"></div>
+				<div class="user-img-wrap"><img src="images/user2.jpg"></div>
+				<div class="teacher-name-wrap">
+					<div class="user-name">
+						走自己的路
+					</div>
+					<div class="index-name">
+						张启山的作业详情
+					</div>
+				</div>
+			</div>
+			<div class="content-mn">
+				<div class="teacher-nav-wrap">
+					<a class="teacher-nav-item" href="javascript:void(0)">培训课程</a>
+					<a class="teacher-nav-item" href="javascript:void(0)">学生进度</a>
+					<a class="teacher-nav-item teacher-nav-item-active" href="javascript:void(0)">周视图</a>
+					<a class="teacher-nav-item" href="javascript:void(0)">逾期说明</a>
+					<a class="teacher-nav-item" href="javascript:void(0)">总评分</a>
+				</div>
+				<div class="teacher-content-wrap">
+					<div id='calendar'></div>
+				</div>
+			</div>
+
+			<div class="index-icon-box course-icon"></div>
+			<div class="teacher-logo-img"></div>
+			<div class="wfl-logo-img"></div>
+			<div class="content-ft">
+				<div class="content-ft-l"></div>
+				<div class="content-ft-mn">
+					<div class="page-wrap">
+						<div class="page-none"></div> <!-- 没有分页的状态 -->
+						<!-- <a class="page-last"></div>
+						<a class="page-next"></div> -->
+					</div>
+					<marquee class="content-ft-text" direction="left" scrolldelay="30">****老师，昨天看完了《数学家的叹息》书籍     ****老师，昨天参加了集团的培训讲座........... ................ ........ ........  
+					</marquee>
+				</div>
+				<div class="content-ft-r"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

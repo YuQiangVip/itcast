@@ -1,0 +1,353 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.lg-head {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 280px;
+    background-color: white;
+    z-index: -999;
+}
+.lg-ft {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #558da4;
+}
+
+@media screen and (max-width: 980px) {
+ .lg-head, .lg-nav {
+     width: 1440px;
+ }
+}
+.lg-teach {
+    font-size: 22px;
+    color: #4f8cca;
+    float:left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.lg-logo {
+    background: url(../images/wfl_logo.png) no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 115px;
+    height: 40px;
+    float: right;
+}
+/*登录框样式*/
+.lg-login {
+    float: left;
+    width: 620px;
+    height: 330px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    border: 3px solid #4b8ed3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -310px;
+    margin-top: -220px;
+}
+.lg-loginImg {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -290px;
+    background: url(../images/login.png) no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 60px;
+}
+.lg-login-name {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.lg-login-nameImg {
+    float: left;
+    background: url(../images/Users.png) no-repeat;
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 45px;
+    margin-left: 90px;
+}
+.lg-login-nameInp input {
+    float: left;
+    width: 350px;
+    height: 40px;
+    margin-left: 8px;
+    text-indent: 10px;
+    color: #6faed5;
+    margin-top: 55px;
+    padding: 0 10px;
+    background: url(../images/input-txt.png) no-repeat;
+    background-size: 100%;
+    border: 0;
+    outline: none;
+
+}
+.lg-login-text::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    width: 580px;
+    height: 1px;
+    background-color: #7c7c7c47;
+    color: #7c7c7c47;
+}
+.lg-login-text {
+    width: 877px;
+    height: 33px;
+    font-family: PingFangSC-Light;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 31px;
+    letter-spacing: -1px;
+    color: #7c7c7c;
+    text-indent: 45px;
+    position: relative;
+}
+.lg-login-footerImg {
+    cursor: pointer;
+    display: block;
+    background: url(../images/login-footer.png) no-repeat;
+    background-size: cover;
+    width: 147px;
+    height: 37.5px;
+    position: absolute;
+    bottom: -37.5px;
+    right: 12px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 37.5px;
+}
+.lg-abImg {
+    width: 100%;
+    height: 35%;
+}
+.lg-hand-l {
+    background: url(../images/abc_l.png) no-repeat;
+    background-size: cover;
+    width: 145px;
+    height: 90px;
+    position: absolute;
+    top: 180px;
+    left: -147px;
+}
+.lg-hand-r {
+    background: url(../images/abc_r.png) no-repeat;
+    background-size: cover;
+    width: 145px;
+    height: 90px;
+    position: absolute;
+    top: 180px;
+    right: -147px;
+}
+.lg-book {
+    background: url(../images/book.png) no-repeat;
+    background-size: cover;
+    width: 760px;
+    height: 310px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -380px;
+}
+.lg-login-active {
+    margin-top: 15px;
+}
+.lg-login-w {
+        background: url(../images/whiteRound.png) no-repeat !important;
+    background-size: cover !important;
+    width: 130px;
+    height: 120px;
+    float: left;
+    text-align: center;
+    padding-left: 16px;
+    padding-top: 5px;
+    font-size: 25px;
+    letter-spacing: 0px;
+    color: #7c7c7c !important;
+    line-height: 120px;
+    text-indent: -5px;
+    border: none !important;
+}
+.lg-login-activeTxt {
+    float: left;
+    margin-top: 70px;
+    margin-left: 10px;
+    font-family: PingFangSC-Light;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 31px;
+    letter-spacing: 0px;
+    color: #7c7c7c;
+}
+.lg-login-active1 {
+    margin-left: 65px;
+    /*animation: mymove  5s;*/
+}
+/*动画标签样式*/
+.lg-footer {
+    text-align: center;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+.lg-round {
+    position: absolute;
+    text-align: center;
+    border: none !important;
+    font-size: 18px;
+    color: #fff !important;
+    width: 150px;
+    line-height: 125px;
+    text-indent: 5px;
+    height: 135px;
+    text-indent: 5px;
+    letter-spacing: 1px;
+}
+.lg-round1 {
+    background: url(../images/round1.png) !important;
+    background-size: cover !important;
+    left: 55px;
+    bottom: 135px;
+    
+
+}
+.lg-round2 {
+    background: url(../images/round2.png) !important;
+    background-size: cover !important;
+    left: 20%;
+    bottom: 120px;
+    
+}
+.lg-round3 {
+    background: url(../images/round3.png) !important;
+    background-size: cover !important;
+    right: 7%;
+    bottom: 80px;
+    
+}
+.lg-round4 {
+    background: url(../images/round1.png) !important;
+    background-size: cover !important;
+    right: 0;
+    bottom: 190px;
+}
+
+.rubberBand {
+    /*animate-delay: 1s;   */
+}
+
+/*登录进入*/
+.lg-login-week {
+    text-align: center;
+}
+.lg-login-inNameImg {
+    float: left;
+    background: url(../images/Users.png) no-repeat;
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 45px;
+    margin-left: 90px;
+}
+.lg-login-nameIn {
+    float: left;
+    width: 375px;
+    height: 18px;
+    font-family: MyriadPro-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #73b4dd;
+    margin-top: 60px;
+    margin-left: 7px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.lg-login-week img {
+    width: 35px;
+    height: 35px;
+}
+.lg-login-week p {
+    font-family: PingFangSC-Light;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #7c7c7c;
+    padding-top: 10px;
+}
+.lg-login-week button {
+    outline: none;
+    width: 90px;
+    height: 30px;
+    font-family: PingFangSC-Light;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 9px;
+    letter-spacing: -1px;
+    color: #7c7c7c;
+    border: 1px solid #60a1d8;
+    margin-top: 26px;
+
+}
+
+/*欢迎界面*/
+.lg-login-wel {
+    text-align: center;
+}
+.lg-login-wel img {
+    width: 88px;
+    height: 98px;
+    margin-top: 54px;
+}
+.lg-login-welBox {
+    width: 580px;
+    height: 1px;
+    margin: 21px 15px 18px 15px;
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 0px 0px #ffffff;
+}
+.lg-login-welTxt {
+    font-family: PingFangSC-Light;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 15px;
+    letter-spacing: 0px;
+    color: #7c7c7c;
+}
+
+
+.lg-login-wrapper{
+    position: relative;
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 999;
+}

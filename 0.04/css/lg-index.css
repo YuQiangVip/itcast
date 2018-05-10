@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@font-face{
+    font-family: 'huakang-font';
+    src : url('../font/fontW12(P).ttf');
+}
+html,body,.lg-container {
+    width: 100%;
+    height: 100%;
+   
+}
+.lg-header {
+    width: 100%;
+    height: 12.5%;
+    background-color: #fff;
+    position: relative;
+}
+.lg-teach {
+    position: absolute;
+    font-size: 22px;
+    color: #4f8cca;
+    margin-left: 30px;
+    left: 0;
+    bottom: 10px;
+}
+.lg-logo {
+    position: absolute;
+    background: url(../images/wfl_logo.png) no-repeat;
+    background-size: cover;
+    margin-right: 30px;
+    width: 115px;
+    height: 40px;
+    right: 0;
+    bottom: 10px;
+}
+.lg-nav {
+    width: 100%;
+    height: 87.5%;
+    background-image: url(../images/lg-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.lg-nav-headbg-box {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    margin-left: -505px;
+}
+.lg-nav-headbg {
+    width: 1010px;
+    height: 560px;
+    background-image: url(../images/lg-head.png);
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    background-position: bottom;
+}
+.lg-become {
+    position: absolute;
+    width: 240px;
+    height: 120px;
+}
+.lg-become1 {
+    top: -40px;
+    left: 50px;
+    
+}
+.lg-become2 { 
+    top: -50px;
+    right: 0;
+    height: 150px;
+    width: 200px;
+}
+.lg-become3 {
+    top: 230px;
+    right: 0;
+}
+.lg-nav-welcome {
+    background-image: url(../images/welcome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 808px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -355px;
+    margin-top: -215px;  
+    z-index: 1;
+}
+.lg-nav-input {
+    background-image: url(../images/input-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 750px;
+    height: 163px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -330px;
+    margin-top: -192px;
+    z-index: 1;
+    display: none;
+}
+
+.lg-nav-input input {
+    border: none;
+    margin-top: 10px;
+    margin-left: 220px;
+    width: 335px;
+    height: 70px;
+    font-family: 'huakang-font';
+    font-size: 42px;
+    color: #008db8;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff0;
+    /* text-align: center; */
+}
+.lg-nav-input input::-webkit-input-placeholder {color:#b8b8b8;} 
+.lg-nav-input input:focus::-webkit-input-placeholder {color:#fff;}
+@-webkit-keyframes rotate{
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+	}
+.lg-nav-gear {
+    position: absolute;
+    width: 130px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    margin-top: -28px;
+    margin-left: -95px;
+}
+
+.lg-gear1{
+    background-image: url(../images/round1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    animation: 9.5s linear 0s normal none infinite rotate;
+	-webkit-animation:9.5s linear 0s normal none infinite rotate;
+}
+.lg-gear2{
+    background-image: url(../images/round2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    animation: 9.5s linear 0s normal none infinite rotate;
+	-webkit-animation:9.5s linear 0s normal none infinite rotate;
+}
+.lg-gear3{
+    background-image: url(../images/round3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    animation: 9.5s linear 0s normal none infinite rotate;
+	-webkit-animation:9.5s linear 0s normal none infinite rotate;
+}
+.lg-btnBox {
+    display: none;
+    position: absolute;
+    top: 120px;
+    right: -60px;
+    text-align: center;
+}
+.lg-btn {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 0px;
+    background: url(../images/go.png) no-repeat;
+    background-size: cover;
+    outline: none;
+}
+.lg-nav-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #008db8;
+}
+/* @media screen and (min-width: 1450px) {
+ .lg-nav-headbg {
+    width: 1200px;
+    height: 700px;
+    }
+ } */

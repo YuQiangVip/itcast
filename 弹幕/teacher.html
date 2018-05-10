@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师培训平台</title>
+    <!--清除默认样式-->
+    <link href='css/reset.css' type="text/css" rel="stylesheet">
+    <!--导入动画样式-->
+    <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet">
+    <!--页面样式-->
+    <link href="css/lg-index.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="lg-head">
+    <p class="lg-teach">教师培训平台</p>
+    <div class="lg-logo">
+    </div>
+</div>
+<div class="lg-ft">
+    <div class="lg-abImg">
+        <div class="lg-book"></div>
+    </div>
+</div>
+
+<div class="lg-login-wrapper">
+    <div class="lg-login">
+        <div class="lg-hand-l"></div>
+        <div class="lg-hand-r"></div>
+        <div class="lg-loginImg"></div>
+        <div class="lg-login-name clearfix">
+            <div class="lg-login-nameImg">
+            </div>
+            <div class="lg-login-nameInp">
+                <input type="text" placeholder="ADMIN" />
+            </div>
+        </div>
+        <p class="lg-login-text">在教师的长河里，我停泊在世外的港湾中，在这里我想成为一个</p>
+        <div class="lg-login-active clearfix">
+            <div class="lg-login-active1 lg-login-w ui-widget-header" id="snaptarget">?
+
+            </div>
+            <div class="lg-login-active2 lg-login-w ui-widget-header" id="snaptarget">?
+
+            </div>
+            <div class="lg-login-active3 lg-login-w ui-widget-header" id="snaptarget">?</div>
+            <div class="lg-login-activeTxt">的老师</div>
+        </div>
+        <div class="lg-login-footerImg">登录</div>
+    </div>
+    <div class="lg-footer clearfix">
+        <div class="lg-round lg-round4 draggable ui-widget-content" id="draggable1">善于计划</div>
+        <div class="lg-round lg-round3 draggable ui-widget-content" id="draggable2">亲和友善</div>
+        <div class="lg-round lg-round2 draggable ui-widget-content" id="draggable3">积极阳光</div>
+        <div class="lg-round lg-round1 draggable ui-widget-content" id="draggable4">幽默</div>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+ <script>
+  $(function() {
+    $( "#draggable1" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable2" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable3" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable4" ).draggable({ snap: ".ui-widget-header" });
+  });
+
+  </script>

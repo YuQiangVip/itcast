@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计划课程表</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="fullcalender/fullcalendar.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="fullcalender/moment.min.js"></script>
+	<script type="text/javascript" src="fullcalender/fullcalendar.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="user-cancel-wrap">
+			<span class="notice-tip-box">
+				<a href="javascript:void(0)">通知</a><em>10</em>
+			</span>
+			<a href="javascript:void(0)" class="user-cancel">注销</a>
+		</div>		
+	</div>
+	<div class="main-wrap">
+		<div class="nav-wrap">
+			<ul class="nav-list">
+				<li class="nav-item nav-item-title z1"><i></i>教师培训平台</li>
+				<li class="nav-item z2"><a class="nav-link" href="javascript:void(0)">我的计划</a></li>
+				<li class="nav-item z3"><a class="nav-link-active" href="javascript:void(0)">我的课程</a></li>
+				<li class="nav-item z4"><a class="nav-link" href="javascript:void(0)">课程进度</a></li>
+			</ul>
+		</div>
+		<div class="sidebar-img"></div>
+		<div class="content-wrap">
+			<div class="content-hd">
+				<div class="user-active"></div>
+				<div class="user-img-wrap"><img src="images/user.jpg"></div>
+				<div class="user-name-wrap">
+					<div class="user-name">
+						韵小曦
+					</div>
+					<div class="index-name">
+						我的课程
+					</div>
+				</div>
+				<div class="user-target">
+					<div class="target-l">
+						<em class="text-icon"></em>
+						<span class="text-mq">我要成为一个聪明的、有才的、多金、的老师</span> 
+					</div>
+					<div class="target-r"></div>
+				</div>
+			</div>
+
+			<div class="content-mn">
+				<div class="table-content-wrap">
+					<table width="100%" class="wfl-table">
+				        <thead>  
+				            <tr>  
+				                <th>  
+				                    讲座内容
+				                </th>  
+				                <th>  
+				                    培训负责人  
+				                </th>  
+				                <th>  
+				                    培训时长 
+				                </th>  
+				                <th>  
+				                    讲座地点
+				                </th>  
+				                <th>  
+				                    反馈要求
+				                </th>
+				            </tr>  
+				        </thead>
+				        <tr>  
+				            <td>  
+				                世外讲座
+				            </td>  
+				            <td>  
+				                叶岚  
+				            </td>  
+				            <td>  
+				                60分钟 
+				            </td>  
+				            <td>  
+				                世外小学
+				            </td>
+				            <td>  
+				                参与签到
+				            </td>
+				        </tr>
+				    </table>  
+				</div>
+				<div class="info-wrap">
+					<div class="info-item">
+						<em>我的带课老师:</em>
+						<div class="info-content">
+							<div class="file-wrap">
+							    <div class="file-btn">点击上传</div>
+							    <input type="file" class="file_input">
+							</div>
+							<div class="file-content-item">我要当一个好老师.doc<a class="javascript:void(0)">[删除]</a></div>
+						</div>
+					</div>
+					<div class="info-item">
+						<em>我对课程的评价:</em>
+						<div class="info-content">
+							<div class="star-wrap">
+							    <div id="starBg" class="star_bg">                    	
+								    <input type="radio" id="starScore1" class="score score_1" value="1" name="score">
+								    <a href="#starScore1" class="star star_1" title="差"><label for="starScore1">差</label></a>
+								    <input type="radio" id="starScore2" class="score score_2" value="2" name="score">
+								    <a href="#starScore2" class="star star_2" title="较差"><label for="starScore2">较差</label></a>
+								    <input type="radio" id="starScore3" class="score score_3" value="3" name="score">
+								    <a href="#starScore3" class="star star_3" title="普通"><label for="starScore3">普通</label></a>
+								    <input type="radio" id="starScore4" class="score score_4" value="4" name="score">
+								    <a href="#starScore4" class="star star_4" title="较好"><label for="starScore4">较好</label></a>
+								    <input type="radio" id="starScore5" class="score score_5" value="5" name="score">
+								    <a href="#5" class="star star_5" title="好"><label for="starScore5">好</label></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="info-item">
+						<em>我对老师的评价:</em>
+						<div class="info-content">
+							<select class="student-assess">
+								<option>A+</option>
+								<option>A-</option>
+								<option>B+</option>
+								<option>B-</option>
+								<option>C+</option>
+								<option>C-</option>
+								<option>D+</option>
+								<option>D-</option>
+							</select> 							
+						</div>
+					</div>
+					<div class="info-item">
+						<em>老师的评语:</em>
+						<div class="info-content">
+							<div class="teacher-assess">
+							   这个同学还阔以，上课认真，作业上交速度快，正确率高，点赞，好评！希望继续加油！
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="index-icon-box course-icon"></div>
+			<div class="logo-img"></div>
+			<div class="wfl-logo-img"></div>
+			<div class="content-ft">
+				<div class="content-ft-l"></div>
+				<div class="content-ft-mn">
+					<div class="page-wrap">
+						<div class="page-none"></div> <!-- 没有分页的状态 -->
+						<!-- <a class="page-last"></div>
+						<a class="page-next"></div> -->
+					</div>
+					<marquee class="content-ft-text" direction="left" scrolldelay="30">****老师，昨天看完了《数学家的叹息》书籍     ****老师，昨天参加了集团的培训讲座........... ................ ........ ........  
+					</marquee>
+				</div>
+				<div class="content-ft-r"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
