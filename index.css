@@ -38,6 +38,7 @@
     height: 1.066667rem;
     text-align: center;
     color: #fff;
+    border:none;
     border-radius: 5px;
     line-height: 1.066667rem;
     background: linear-gradient(to right, #0370ff , #00c7ff); 
@@ -88,7 +89,7 @@
     position: absolute;
     top: 50%;
     width: 100%;
-    margin-top: -1.866667rem;
+    margin-top: -1.566667rem;
 }
 .mainBox span {
     display: block;
